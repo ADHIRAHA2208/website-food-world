@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chinu Food World - Sign Up</title>
+    <link rel="stylesheet" href="singin.css">
+</head>
+<body>
+   
+    <!-- Signup Section -->
+    <section class="signup">
+        <h1>Create an Account</h1>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2010 Chinu Food World. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Show alert on successful signup
+        const signupForm = document.getElementById('signup-form');
+
+        signupForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+            // Show success message
+            alert("Your account has been created successfully!");
+            window.location.href = "login.html"; // Redirect to login page
+
+            // Optionally, you can reset the form after the alert
+            signupForm.reset();
+        });
+    </script>
+</body>
+</html>

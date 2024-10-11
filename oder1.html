@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chinu Food World - Order Page</title>
+    <link rel="stylesheet" href="oder1.css">
+</head>
+<body>
+    <!-- Order Section -->
+    <section class="order">
+        <h1>Order Your Food</h1>
+        <form id="order-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="menu">Choose Your Meal:</label>
+                <select id="menu" name="menu" required>
+                    <option value="">Select...</option>
+                    <option value="pizza"> Pizza - $10.99</option>
+                    <option value="pizza">Margherita Pizza - $9.49</option>
+                    <option value="pizza">Chicken Pizza -$ 12.99 </option> 
+                    <option value="burger">Classic Cheeseburger - $7.99</option>
+                    <option value="burger">Double Bacon Burger - $9.99</option>
+                    <option value="burger">aloo Burger - $7.99</option>
+                    <option value="salad">Caesar Salad - $8.49</option>
+                    <option value="salad">greek Salad - $7.49</option>
+                    <option value="salad">Quinoa Salad - $8.49</option>
+                    <option value="drink">cold cofee - $80</option>
+                    <option value="salad">hot coffe- $45</option>
+                    <option value="salad">cold drinks - $399</option>
+                    <option value="salad">Brezzer- $100</option>
+
+                </select>
+            </div>
+          
+            <button onclick="showAlert()">oder</button>
+            <a href="view oder.html" class="btn">view oder </a>
+        </form>
+    </section>
+
+    <!-- Track Delivery Section -->
+    <section class="track-delivery">
+        <h1>Track Your Delivery</h1>
+        <form id="track-form">
+            <div class="form-group">
+                <label for="tracking-id">Tracking ID:</label>
+                <input type="text" id="tracking-id" name="tracking-id" required>
+            </div>
+            <button type="submit">Track</button>
+        </form>
+        <div class="tracking-info">
+            <!-- This section will be dynamically populated with tracking info -->
+            <p id="tracking-message">Enter your Tracking ID to see the delivery status.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2010 Chinu Food World. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+
+        // button
+        function showAlert()
+         {
+       alert("Your oder placed sucessfully");
+     }
+        // Example script for tracking order (to be expanded)
+        const trackForm = document.getElementById('track-form');
+        const trackingMessage = document.getElementById('tracking-message');
+
+        trackForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const trackingId = document.getElementById('tracking-id').value;
+
+            // Placeholder logic for tracking (should be replaced with actual logic)
+            if (trackingId === '12345') {
+                trackingMessage.textContent = "Your order is on the way! Estimated delivery: 15 minutes.";
+            } else {
+                trackingMessage.textContent = "Tracking ID not found. Please check and try again.";
+            }
+            
+        });
+    </script>
+</body>
+</html>

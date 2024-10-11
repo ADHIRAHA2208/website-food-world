@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chinu Food World - View Order</title>
+    <link rel="stylesheet" href="view oder.css">
+</head>
+<body>
+   
+
+    <!-- Order Summary Section -->
+    <section class="order-summary">
+        <h1>Your Order Summary</h1>
+
+        <!-- Customer Information -->
+        <div class="customer-info">
+            <h2>Customer Information</h2>
+            <p><strong>Name:</strong> <span id="customer-name">Rakshada tawade</span></p>
+            <p><strong>Delivery Address:</strong> <span id="delivery-address">123 Food St, Food City</span></p>
+            <p><strong>Phone Number:</strong> <span id="phone-number">123-456-7890</span></p>
+        </div>
+
+        <!-- Order Details -->
+        <div class="order-details">
+            <h2>Order ID: <span id="order-id">OID12345</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="order-items">
+                    <tr>
+                        <td> Pizza</td>
+                        <td>1</td>
+                        <td>$10.99</td>
+                    </tr>
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="1"><strong>Total Price:</strong></td>
+                        <td id="total-price">$10.99</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <button onclick="printOrder()">Print Order</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Chinu Food World. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to print the order summary
+        function printOrder() {
+            window.print();
+        }
+    </script>
+</body>
+</html>

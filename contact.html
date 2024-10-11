@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chinu Food World - Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or feedback, feel free to reach out!</p>
+
+        <!-- Contact Form -->
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> info@chinufoodworld.com</p>
+            <p><strong>Address:</strong> 123 Food Street, Flavor Town, FT 12345</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2010 Chinu Food World. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Show alert on successful form submission
+        const contactForm = document.getElementById('contact-form');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+            // Show success message
+            alert("Your message has been sent successfully!");
+
+            // Optionally, you can reset the form after the alert
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
